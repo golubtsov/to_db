@@ -12,7 +12,7 @@ const pool = mysql.createPool(config);
 
 function create_query(arr){
     for (let i = 0; i < arr.length; i++) {
-        let str = `INSERT INTO prods(id, id_cat, name_product, product_url, popular, new, price, about, produser) VALUES ('${arr[i].id}',${arr[i].id_cat},'${arr[i].name_product}','${arr[i].product_url}',${boolean_el()},${boolean_el()},${arr[i].price},'${arr[i].about}','${arr[i].produser}')`;
+        let str = `INSERT INTO products(id, id_cat, name_product, product_url, popular, new, price, about, produser) VALUES ('${arr[i].id}',${arr[i].id_cat},'${arr[i].name_product}','${arr[i].product_url}',${boolean_el()},${boolean_el()},${arr[i].price},'${arr[i].about}','${arr[i].produser}')`;
         send_db(str);
     }
 }
